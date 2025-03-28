@@ -36,10 +36,7 @@ class ReportsPlugin implements Plugin
             // get reports with
             $panel->navigationGroups([
                 NavigationGroup::make()
-                    ->label(
-                        reports()->getNavigationLabel() ??
-                            __('filament-reports::menu-page.nav.group')
-                    )
+                    ->label(__('filament-reports::menu-page.nav.group'))
                     ->icon(reports()->getNavigationIcon()),
             ]);
             $panel->navigationItems(
@@ -72,13 +69,7 @@ class ReportsPlugin implements Plugin
                                     ($report->getIcon() ??
                                         'heroicon-o-document-text')
                             )
-                            ->group(
-                                get_class($report)::getNavigationGroup() ??
-                                    (reports()->getNavigationGroup() ??
-                                        __(
-                                            'filament-reports::menu-page.nav.group'
-                                        ))
-                            )
+                            ->group(__('filament-reports::menu-page.nav.group'))
                             ->hidden(
                                 ! $report::shouldRegisterNavigation()
                             );

@@ -215,17 +215,17 @@ trait HasPageSettings
 
     public function getHeading(): string
     {
-        return $this->heading ?? __('filament-reports::menu-page.heading');
+        return __('filament-reports::menu-page.heading');
     }
 
     public function getNavigationLabel(): string
     {
-        return $this->navigationLabel ?? __('filament-reports::menu-page.nav.label');
+        return __('filament-reports::menu-page.nav.label');
     }
 
     public function getTitle(): string
     {
-        return $this->title ?? __('filament-reports::menu-page.title');
+        return __('filament-reports::menu-page.title');
     }
 
     public function getSlug(): string

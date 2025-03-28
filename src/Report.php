@@ -16,6 +16,8 @@ use EightyNine\Reports\Contracts\HasHeader;
 use Filament\Facades\Filament;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Pages\Page;
+use Illuminate\Support\Facades\Lang;
+use function Illuminate\Support\Facades\__;
 
 class Report extends Page implements HasActionsPanel, HasBody, HasFooter, HasForms, HasHeader
 {
@@ -69,7 +71,7 @@ class Report extends Page implements HasActionsPanel, HasBody, HasFooter, HasFor
 
     public function getGroup(): ?string
     {
-        return $this->group ?? __('filament-reports::menu-page.nav.group');
+        return __('filament-reports::menu-page.nav.group');
     }
 
     public static function getRouteName(?string $panel = null): string
