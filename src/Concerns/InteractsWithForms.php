@@ -229,19 +229,7 @@ trait InteractsWithForms
             return null;
         }
 
-        return app($driver, ['activeLocale' => $this->getActiveFormsLocale() ?? app()->getLocale()]);
-    }
-
-    public function updatedFilamentLocale(): void
-    {
-        // Force forms to be rebuilt:
-        $this->hasCachedForms = false;
-        $this->cachedForms = null;
-    }
-    
-    public function getActiveFormsLocale(): ?string
-    {
-        return app()->getLocale(); 
+        return app($driver, ['activeLocale' => app()->getLocale()]);
     }
 
     public function updatingInteractsWithForms(string $statePath): void
