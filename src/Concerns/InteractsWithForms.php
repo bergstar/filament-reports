@@ -213,25 +213,6 @@ trait InteractsWithForms
         }
     }
 
-    /**
-     * @return class-string<TranslatableContentDriver> | null
-     */
-    public function getFilamentTranslatableContentDriver(): ?string
-    {
-        return null;
-    }
-
-    public function makeFilamentTranslatableContentDriver(): ?TranslatableContentDriver
-    {
-        $driver = $this->getFilamentTranslatableContentDriver();
-
-        if (! $driver) {
-            return null;
-        }
-
-        return app($driver, ['activeLocale' => app()->getLocale()]);
-    }
-
     public function updatingInteractsWithForms(string $statePath): void
     {
         $statePath = (string) str($statePath)->before('.');
