@@ -1,21 +1,21 @@
 {
-    "name": "eightynine/filament-reports",
+    "name": "bergstar/filament-reports",
     "description": "Elegant reports in your filament application",
     "keywords": [
-        "eightynine",
+        "bergstar",
         "laravel",
         "filament-reports"
     ],
-    "homepage": "https://github.com/eightynine/filament-reports",
+    "homepage": "https://github.com/bergstar/filament-reports",
     "support": {
-        "issues": "https://github.com/eightynine/filament-reports/issues",
-        "source": "https://github.com/eightynine/filament-reports"
+        "issues": "https://github.com/bergstar/filament-reports/issues",
+        "source": "https://github.com/bergstar/filament-reports"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "Eighty Nine",
-            "email": "eighty9nine@gmail.com",
+            "name": "Dmitry K Valberg",
+            "email": "dmitry@bergstar.com",
             "role": "Developer"
         }
     ],
