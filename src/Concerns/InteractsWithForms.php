@@ -232,9 +232,16 @@ trait InteractsWithForms
         return app($driver, ['activeLocale' => $this->getActiveFormsLocale() ?? app()->getLocale()]);
     }
 
+    public function updatedFilamentLocale(): void
+    {
+        // Force forms to be rebuilt:
+        $this->hasCachedForms = false;
+        $this->cachedForms = null;
+    }
+    
     public function getActiveFormsLocale(): ?string
     {
-        return null;
+        return app()->getLocale(); 
     }
 
     public function updatingInteractsWithForms(string $statePath): void
