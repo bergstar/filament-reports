@@ -60,6 +60,9 @@
     },
     "extra": {
         "laravel": {
+            "branch-alias": {
+                "dev-main": "dev-master"
+            },
             "providers": [
                 "EightyNine\\Reports\\ReportsServiceProvider"
             ],
