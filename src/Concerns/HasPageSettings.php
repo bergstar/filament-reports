@@ -7,13 +7,7 @@ use Illuminate\Contracts\View\View;
 
 trait HasPageSettings
 {
-    protected ?string $navigationLabel = null;
-
-    protected ?string $title = null;
-
     protected ?string $slug = null;
-
-    protected ?string $heading = null;
 
     protected ?string $subheading = null;
 
@@ -52,26 +46,8 @@ trait HasPageSettings
         return $this;
     }
 
-    public function navigationLabel(string $label)
-    {
-        $this->navigationLabel = $label;
 
-        return $this;
-    }
 
-    public function title(string $title)
-    {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    public function heading(string $heading)
-    {
-        $this->heading = $heading;
-
-        return $this;
-    }
 
     public function slug(string $slug)
     {
@@ -213,16 +189,28 @@ trait HasPageSettings
         return $this->subheading;
     }
 
+    /**
+     * Always resolve translations at render time to respect dynamic locale switching.
+     * Never cache or resolve translation strings at boot or construction.
+     */
     public function getHeading(): string
     {
         return __('filament-reports::menu-page.heading');
     }
 
+    /**
+     * Always resolve translations at render time to respect dynamic locale switching.
+     * Never cache or resolve translation strings at boot or construction.
+     */
     public function getNavigationLabel(): string
     {
         return __('filament-reports::menu-page.nav.label');
     }
 
+    /**
+     * Always resolve translations at render time to respect dynamic locale switching.
+     * Never cache or resolve translation strings at boot or construction.
+     */
     public function getTitle(): string
     {
         return __('filament-reports::menu-page.title');
